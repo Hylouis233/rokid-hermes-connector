@@ -1,0 +1,15 @@
+# 示例配置文件；当前 MVP 通过环境变量读取配置。
+port: 8081
+mode: ha-direct
+language: zh-cn
+ha_url: http://homeassistant.local:8123
+ha_token: replace-with-home-assistant-token
+rokid_auth_ak: replace-with-rokid-auth-ak
+hermes:
+  site_id: rokid-glasses
+  topic: hermes/intent/RokidCommand
+mqtt:
+  host: 127.0.0.1
+  port: 1883
+  username: ""
+  password: ""

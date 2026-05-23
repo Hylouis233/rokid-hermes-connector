@@ -1,0 +1,15 @@
+services:
+  rokid-hermes-connector:
+    build: .
+    ports:
+      - "8081:8081"
+    environment:
+      PORT: "8081"
+      MODE: "ha-direct"
+      HA_URL: "http://homeassistant.local:8123"
+      HA_TOKEN: "replace-with-home-assistant-token"
+      LANGUAGE: "zh-cn"
+      ROKID_AUTH_AK: "replace-with-rokid-auth-ak"
+      HERMES_SITE_ID: "rokid-glasses"
+      HERMES_TOPIC: "hermes/intent/RokidCommand"
+    restart: unless-stopped
